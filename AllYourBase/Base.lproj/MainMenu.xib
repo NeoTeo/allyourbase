@@ -26,23 +26,50 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="xRH-1s-NZX"/>
-                <menuItem title="hex" id="gaD-3J-RNs" userLabel="hex">
+                <menuItem title="dec" id="649-aI-8fW">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="hexSelected:" target="6WB-V4-4Pq" id="ARA-08-lUe"/>
-                    </connections>
+                    <menu key="submenu" title="dec" id="MTF-Ef-fmm">
+                        <items>
+                            <menuItem title="hex" identifier="dec2hex" id="gaD-3J-RNs" userLabel="hex">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="selectionAction:" target="6WB-V4-4Pq" id="eRf-n5-be1"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="bin" tag="1" identifier="dec2bin" id="Wny-0u-fz4">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="selectionAction:" target="6WB-V4-4Pq" id="Edt-Ev-ZwN"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                 </menuItem>
-                <menuItem title="decimal" id="yig-42-w8L" userLabel="decimal">
+                <menuItem title="hex" id="Tno-Nb-NKN">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="decSelected:" target="6WB-V4-4Pq" id="7rP-ZS-7rR"/>
-                    </connections>
+                    <menu key="submenu" title="hex" id="Fz6-gc-ZDD">
+                        <items>
+                            <menuItem title="bin" id="BHL-Jb-zDc" userLabel="bin">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="dec" id="yig-42-w8L" userLabel="dec">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                        </items>
+                    </menu>
                 </menuItem>
-                <menuItem title="binary" id="Wny-0u-fz4">
+                <menuItem title="bin" id="Tft-3q-a2P">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="binSelected:" target="6WB-V4-4Pq" id="FFA-Av-oci"/>
-                    </connections>
+                    <menu key="submenu" title="bin" id="hnY-2H-ahO">
+                        <items>
+                            <menuItem title="hex" id="lwz-fp-cbd">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="dec" id="UV9-Xx-v4k">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                        </items>
+                    </menu>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="5o8-lr-F8S"/>
                 <menuItem title="Quit" id="f97-aj-K6q">

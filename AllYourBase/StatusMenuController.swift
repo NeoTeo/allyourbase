@@ -35,6 +35,23 @@ class StatusMenuController: NSObject {
     
     @IBOutlet weak var statusMenu: NSMenu!
     
+    @IBAction func selectionAction(_ sender: Any) {
+        
+        guard let menuItem = sender as? NSMenuItem else { return }
+        
+        mutexSelect(item: menuItem)
+        
+//        print("menu item id \(menuItem.identifier?.rawValue)")
+        switch menuItem.identifier?.rawValue {
+        case "dec2hex": selectedBaseType = .Hex
+        case "dec2bin": selectedBaseType = .Bin
+            
+        default: selectedBaseType = nil
+        }
+        
+        updateTitle()
+    }
+    
     var pasteBoardCheckTimer: Timer?
     
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
